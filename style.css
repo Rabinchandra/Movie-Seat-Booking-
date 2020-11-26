@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
+
+/* 
+   Seat color: #44451
+   Background: #242333
+   Selected seat color: #6feaf6
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #242333;
+  color: #fff;
+  height: 100vh;
+  font-family: "Lato", "Arial";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.movie-container {
+  font-size: 20px;
+  width: 380px;
+  text-align: center;
+}
+
+#movie-select {
+  border: none;
+  padding: 11px 15px;
+  border-radius: 12px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  outline: none;
+  margin-left: 12px;
+  font-size: 17px;
+  margin-bottom: 20px;
+}
+
+/* Seat */
+.seat {
+  background: #444451;
+  width: 20px;
+  height: 17px;
+  border-radius: 12px 12px 0px 0px;
+}
+
+.seat.selected {
+  background: #6feaf6;
+}
+
+.seat.occupied {
+  background: #fff;
+}
+
+/* Row and seat */
+.row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+
+.row .seat {
+  margin: 5px;
+}
+
+.row .seat:nth-of-type(2) {
+  margin-right: 25px;
+}
+
+.row .seat:nth-last-of-type(2) {
+  margin-left: 25px;
+}
+
+.row .seat:not(.occupied):hover {
+  transform: scale(1.2);
+}
+
+/* Showcase */
+.showcase {
+  display: flex;
+  list-style: none;
+}
+
+.showcase li {
+  display: flex;
+  margin-right: 15px;
+}
+
+.showcase small {
+  margin-left: 5px;
+}
+
+/* container */
+.container {
+  perspective: 1000px;
+  margin-bottom: 20px;
+}
+
+/* Display */
+.display {
+  width: 90%;
+  height: 100px;
+  margin: auto;
+  background: #fff;
+  transform: rotateX(-45deg);
+  margin-bottom: 20px;
+  box-shadow: 0px 5px 20px 3px rgba(255, 255, 255, 0.3);
+}
+
+/* text */
+.text span {
+  color: #6feaf6;
+  font-weight: bold;
+}
